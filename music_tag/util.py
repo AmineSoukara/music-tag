@@ -19,9 +19,9 @@ def sanitize_year(year):
         if ',' in year:
             year = year.split(',')[0]
             # TODO: warn that we're dropping a 2nd year
-        elif '/' in year:
+        if '/' in year:
             year = year.split('/')[0]
-        elif '-' in year:
+        if '-' in year:
             year = year.split('-')[0]
     except TypeError:
         pass
